@@ -1,0 +1,33 @@
+@media (max-width: 1200px) {
+     .main__header {
+          padding: 0 20px;
+     }
+     .card_books_asside{
+          max-width: 1000px;
+          width: 100%;
+          min-height: 210px; 
+          background: #EFEEF6; 
+          padding-top: 0; 
+          padding: 50px 0;
+          text-align: center;
+     }
+     .custom__div_button_asside{
+          padding-top: 0;
+     }
+     .slider {
+          margin-top: 151px;
+          margin-bottom: 105px;
+      }
+     .books{
+          flex-direction: column;
+     }
+     .ml--5{
+          margin-left: 0px;
+     }
+}
+@media (max-width: 1200px) {
+     .books{
+          flex-direction: column;
+     
+     }
+}
