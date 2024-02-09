@@ -1,0 +1,26 @@
+# Настройки развертывания для GitHub Pages
+# См. документацию по настройке GitHub Pages: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Название вашей основной ветки
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      # Сборка вашего проекта (если необходимо)
+      # - name: Build project
+      #   run: npm run build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/index.html  # Папка, из которой будет развернут ваш сайт
+          keep_files: false
